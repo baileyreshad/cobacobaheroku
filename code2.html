@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}    
+	
+	
+	<div class="bawah">
+        <h3>Recommendation</h3>
+        {%for data in hasil%}
+
+        <h4> {{ data }} </h4>
+
+        {%endfor%}
+    </div>
+	
+{% endblock %}

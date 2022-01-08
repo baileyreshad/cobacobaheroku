@@ -1,0 +1,49 @@
+
+{% extends 'index.html' %}
+{% block content %}
+
+<header class="masthead" style="background-image: url(static/img/Movie-Genres-Types-of-Movies-List-of-Genres-and-Categories-Header-StudioBinder.jpg);opacity: 1;filter: hue-rotate(0deg);">
+        <div class="intro-body" style="filter: brightness(200%);opacity: 1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading" style="font-size: 80px;font-family: Aclonica, sans-serif;">Are you bored yet?</h1>
+                        <p class="intro-text" style="font-family: Cabin, sans-serif;">We will help you find a movie based on your moods!</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About US</h2>
+                    <p>Recowatch is a website for recommending movies based on your favorite movie. The trick is that you only need to enter the name of the movie you like and then we will find another movie that looks like it</p>
+                    <p>Our goal is to help you find happiness!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section content-section text-center" style="background-image:url('assets/img/downloads-bg.jpg');">
+    <h4><strong>write your favorite movie!</strong></h4>
+    <div> <form action="{{ url_for('reco') }}" method="post">
+            <label>What would you like to watch ?</label>
+            <input type="text" name="var1"/>
+
+            <button type="submit"> Go! </button>
+        </form>
+    </div>
+    </section>
+
+    <div class="map-clean"></div>
+
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;Recowatch 2021</p>
+        </div>
+</footer>
+
+
+{% endblock %}
